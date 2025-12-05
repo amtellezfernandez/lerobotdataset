@@ -31,10 +31,12 @@ If that prints a number (episode count), RoboCandyWrapper works.
 ```bash
 exit()
 ```
-
+```bash
+python -m examples.add_episode_annotations     --dataset amtellezfernandez/robot-learning-tutorial-data     --episode 0     --success     --annotate operator "am"     --annotate notes "alba teleoperated this" --show-timestamps
+```
 ```bash
 # Add multiple annotations to one episode
-python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data \
     --episode 0 \
     --success \
     --annotate human_visible "no" \
@@ -47,7 +49,7 @@ python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-lea
 ```bash
 
 # Add dataset-level annotations
-python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data \
     --dataset-annotate robot_model "kassow" \
     --dataset-annotate end_effector "standard_gripper" \
     --dataset-annotate workspace_id "manufacturing_cell_A3" \
@@ -56,7 +58,7 @@ python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-lea
 ```bash
 
 # Batch operation - modify 5 episodes at once
-python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data \
     --episodes "0,1,2,3,4" \
     --annotate quality "good" \
     --annotate human_visible "yes"
