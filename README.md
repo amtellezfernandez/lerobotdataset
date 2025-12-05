@@ -37,7 +37,7 @@ python -m examples.add_episode_annotations     --dataset amtellezfernandez/robot
 
 ```bash
 # View all annotations
-python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --dataset lerobot/pusht --list-all
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --list-all
 
 # View all including deleted with timestamps
 python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --list-all --include-deleted --show-timestamps
