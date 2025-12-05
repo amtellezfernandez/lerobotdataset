@@ -31,3 +31,40 @@ If that prints a number (episode count), RoboCandyWrapper works.
 ```bash
 exit()
 ```
+
+```bash
+# Add multiple annotations to one episode
+python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+    --episode 0 \
+    --success \
+    --annotate human_visible "no" \
+    --annotate quality "good" \
+    --annotate task_id "candy_wrapper_pick_v1" \
+    --annotate object "box" \
+    --annotate obstacles_present "no" \
+    --annotate collisions "none"
+```
+```bash
+
+# Add dataset-level annotations
+python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+    --dataset-annotate robot_model "kassow" \
+    --dataset-annotate end_effector "standard_gripper" \
+    --dataset-annotate workspace_id "manufacturing_cell_A3" \
+    --dataset-annotate environment_type "factory_h"
+```
+```bash
+
+# Batch operation - modify 5 episodes at once
+python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+    --episodes "0,1,2,3,4" \
+    --annotate quality "good" \
+    --annotate human_visible "yes"
+```
+```bash
+
+# Modify all episodes
+python examples/add_episode_annotations.py --dataset amtellezfernandez/robot-learning-tutorial-data \
+    --all-episodes \
+    --annotate batch_id "2024-01-15"
+```
