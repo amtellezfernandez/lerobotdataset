@@ -37,19 +37,19 @@ python -m examples.add_episode_annotations     --dataset amtellezfernandez/robot
 
 ```bash
 # View all annotations
-python examples/add_episode_annotations.py --dataset lerobot/pusht --list-all
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --dataset lerobot/pusht --list-all
 
 # View all including deleted with timestamps
-python examples/add_episode_annotations.py --dataset lerobot/pusht --list-all --include-deleted --show-timestamps
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --list-all --include-deleted --show-timestamps
 
 # Delete an annotation from one episode
-python examples/add_episode_annotations.py --dataset lerobot/pusht --episode 0 --delete quality
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data  --episode 0 --delete quality
 
 # Delete from multiple episodes
-python examples/add_episode_annotations.py --dataset lerobot/pusht --episodes "0,1,2" --delete quality
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data  --episodes "0,1,2" --delete quality
 
 # Delete dataset-level annotation
-python examples/add_episode_annotations.py --dataset lerobot/pusht --delete-dataset robot_model
+python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data --delete-dataset robot_model
 ```
 ```bash
 # Add multiple annotations to one episode
