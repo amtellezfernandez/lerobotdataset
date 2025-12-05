@@ -34,6 +34,23 @@ exit()
 ```bash
 python -m examples.add_episode_annotations     --dataset amtellezfernandez/robot-learning-tutorial-data     --episode 0     --success     --annotate operator "am"     --annotate notes "alba teleoperated this" --show-timestamps
 ```
+
+```bash
+# View all annotations
+python examples/add_episode_annotations.py --dataset lerobot/pusht --list-all
+
+# View all including deleted with timestamps
+python examples/add_episode_annotations.py --dataset lerobot/pusht --list-all --include-deleted --show-timestamps
+
+# Delete an annotation from one episode
+python examples/add_episode_annotations.py --dataset lerobot/pusht --episode 0 --delete quality
+
+# Delete from multiple episodes
+python examples/add_episode_annotations.py --dataset lerobot/pusht --episodes "0,1,2" --delete quality
+
+# Delete dataset-level annotation
+python examples/add_episode_annotations.py --dataset lerobot/pusht --delete-dataset robot_model
+```
 ```bash
 # Add multiple annotations to one episode
 python -m examples.add_episode_annotations --dataset amtellezfernandez/robot-learning-tutorial-data \
